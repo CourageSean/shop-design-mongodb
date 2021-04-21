@@ -69,3 +69,18 @@ app.get("/product/:id",(req,res) => {
 
 
 })
+
+app.post("/update/:id",(req,res) => {
+    const id = req.params.id
+  
+    Product.findByIdAndUpdate(id,{"name":req.body.name,"Company":req.body.company,"Price":req.body.price})
+    .then((data) => {
+        res.redirect('/')
+        console.log(data)
+    } ).catch((err) => {
+      console.log(err)
+    })
+
+
+})
+

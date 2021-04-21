@@ -25,9 +25,37 @@
               <p>$<%= data.Price %> </p>
           
             </a>
+            <form id="update-form" action=<%=`/update/${data._id} `%> method="POST"  class="hide">
+                <input type="text" name="name" placeholder="name">
+                <br>
+                <input type="text" name="company" placeholder="company">
+                <br>
+                <input type="text" name="price" placeholder="price">
+                <br>
+                <input type="text" name="img-url" placeholder="img-url">
+                <br>
+                <input type="submit" value="confirm changes">
+            </form>
+            <button id="update-form-btn">Update</button> <button data-id="<%=data._id %>" id="delete-btn">DELETE</button> 
           </div>
     </article>
+<script>
+const updateBtn = document.getElementById("update-form-btn")
+const updateForm = document.getElementById("update-form")
+const deleteBtn = document.getElementById("delete-btn")
+updateBtn.addEventListener("click",(e) => {
+  updateForm.classList.toggle("hide")
+})
+deleteBtn.addEventListener("click",(e) => {
+//     fetch(`https://localhoast:3004/delete/${event.target.dataset.id}`)
+//   .then(response => response.json())
+//   .then(json => console.log(json))
+console.log(event.target.dataset.id)
 
+})
+
+
+</script>
 
 </body>
 </html>
