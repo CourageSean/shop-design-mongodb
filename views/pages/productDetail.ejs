@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+   
+    <article class="product-detail">
+
+        <div class="product-container2" style="height: 300px">
+            <a class="img-container2" href="https://amzn.to/2WX7vtD">
+              <span class="small-overlayer"></span>
+              <img src="<%=data['Product-picture-Link'] %>" alt="desk lamp">
+            </a>
+           
+            <a class="product-info2" href="#">
+              <div>
+                <p><%=data.name %> </p>
+                <p><%= data.Company %> </p>
+              </div>
+              <p>$<%= data.Price %> </p>
+          
+            </a>
+          </div>
+    </article>
+
+
+</body>
+</html>

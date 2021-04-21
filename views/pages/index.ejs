@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+ 
+
+    <section>
+      <header>
+        <h1 id="logo">THE DESIGN SHOP</h1>
+        <!-- Menu Burger  -->
+
+        
+        <div class="menu-burger" >
+          <input type="checkbox" name="check" id="checkbox">
+          <div id="line1"></div>
+          <div id="line2"></div>
+          <div id="line3"></div>
+
+          <ul class="nav-bar">  
+            <li> <a href="#">Weekly Recommendations</a>   </li>
+          <li> <a href="#">Contact </a> </li>
+          <li> <a href="#">TDB</a> </li>
+        </ul>
+        
+</div>
+        
+        <!-- ---- -->
+        <!-- <ul class="nav-bar">  
+          <li> <a href="#">Weekly Recommendations</a>   </li>
+        <li> <a href="#">Contact </a> </li>
+        <li> <a href="#">TDB</a> </li>
+      </ul> -->
+      </header>
+      <!-- <---hero-> -->
+        <div class="product-container1">
+          
+          <a class="img-container1" href=<%=`/product/${result[0]._id}` %>>
+            <span class="big-overlayer"></span>
+            <img class="big-img" src="<%=result[0]['Product-picture-Link'] %>" alt="backpack">
+         
+        </a>
+        
+          <a class="product-info" href="#">
+          <div >
+          <p>Kranken Art Laptop 15" Special Edition Backpack</p>
+          <p>Fjallraven</p>
+        </div>
+        <p>$119.00</p>
+      
+        </a>
+      </div>
+    </section>
+<!--   1st GRID Section       -->
+
+
+
+
+    
+<section class="product-grid">
+
+
+  <% for( let i = 1; i < 7; i++ ) { %>
+
+<div class="product-container2">
+  <a class="img-container2" href=<%=`/product/${result[i]._id}` %>>
+    <span class="small-overlayer"></span>
+    <img src="<%=result[i]['Product-picture-Link'] %>" alt="desk lamp">
+  </a>
+ 
+  <a class="product-info2" href="#">
+    <div>
+      <p><%=result[i].name %> </p>
+      <p><%= result[i].Company %> </p>
+    </div>
+    <p>$<%= result[i].Price %> </p>
+
+  </a>
+</div>
+  
+    <% } %>
+
+
+
+
+    
+     <!--  2nd Hero     -->
+
+    </section>
+    <section class="big-img-section">
+    <div class="product-container1">
+          
+      <a class="img-container1" href="">
+        <span class="big-overlayer"></span>
+        <img class="big-img" src="<%=result[7]['Product-picture-Link'] %>" alt="white book">
+     
+    </a>
+    
+      <a class="product-info" href=<%=`/product/${result[7]._id}` %>>
+      <div >
+      <p>Kranken Art Laptop 15" Special Edition Backpack</p>
+      <p>Fjallraven</p>
+    </div>
+    <p>$119.00</p>
+  
+    </a>
+  </div>
+    </section>
+  
+<!--   2nd GRID Section       -->
+    
+<section class="product-grid">
+ 
+  
+  <% for( let i = 8; i < 14; i++ ) { %>
+
+    <div class="product-container2">
+      <a class="img-container2" href=<%=`/product/${result[i]._id}` %>>
+        <span class="small-overlayer"></span>
+        <img src="<%=result[i]['Product-picture-Link'] %>" alt="desk lamp">
+      </a>
+     
+      <a class="product-info2" href="#">
+        <div>
+          <p><%=result[i].name %> </p>
+          <p><%= result[i].Company %> </p>
+        </div>
+        <p>$<%= result[i].Price %> </p>
+    
+      </a>
+    </div>
+      
+        <% } %>
+      <!-- 6 -->
+
+</section>
+
+ <!--  3rd Hero     -->
+
+</section>
+<section class="big-img-section">
+<div class="product-container1">
+      
+  <a class="img-container1" href=<%=`/product/${result[14]._id}` %>>
+    <span class="big-overlayer"></span>
+    <img class="big-img" src="<%=result[14]['Product-picture-Link']%>" alt="black des lamp">
+ 
+</a>
+
+  <a class="product-info" href="#">
+  <div >
+  <p>Arigato Desk Lamp</p>
+  <p>Grupa</p>
+</div>
+<p>$380.00</p>
+
+</a>
+</div>
+</section>
+
+  
+<!--   3rd GRID Section       -->
+    
+<section class="product-grid">
+ 
+    
+  <% for( let i = 15; i < 21; i++ ) { %>
+
+    <div class="product-container2">
+      <a class="img-container2" href=<%=`/product/${result[i]._id}` %>>
+        <span class="small-overlayer"></span>
+        <img src="<%=result[i]['Product-picture-Link'] %>" alt="desk lamp">
+      </a>
+     
+      <a class="product-info2" href="#">
+        <div>
+          <p><%=result[i].name %> </p>
+          <p><%= result[i].Company %> </p>
+        </div>
+        <p>$<%= result[i].Price %> </p>
+    
+      </a>
+    </div>
+      
+        <% } %>
+
+</section>
+
+<!--  4th Hero     -->
+
+</section>
+<section class="big-img-section">
+<div class="product-container1">
+      
+  <a class="img-container1" href=<%=`/product/${result[21]._id}` %>>
+    <span class="big-overlayer"></span>
+    <img class="big-img" src="<%=result[21]['Product-picture-Link'] %>" alt="graphic design book">
+ 
+</a>
+
+  <a class="product-info" href="#">
+  <div >
+  <p>Min: The New Simplicity in Graphic Design</p>
+  <p>Thames & Hudson</p>
+</div>
+<p>$28.00</p>
+
+</a>
+</div>
+</section>
+
+<!--   4th GRID Section       -->
+    
+<section class="product-grid">
+  <% for( let i = 22; i < 28; i++ ) { %>
+
+    <div class="product-container2">
+      <a class="img-container2" href=<%=`/product/${result[i]._id}` %>>
+        <span class="small-overlayer"></span>
+        <img src="<%=result[i]['Product-picture-Link'] %>" alt="desk lamp">
+      </a>
+     
+      <a class="product-info2" href="#">
+        <div>
+          <p><%=result[i].name %> </p>
+          <p><%= result[i].Company %> </p>
+        </div>
+        <p>$<%= result[i].Price %> </p>
+    
+      </a>
+    </div>
+      
+        <% } %>
+      <!-- 6 -->
+
+</section>
+
+
+
+<!--  5th Hero     -->
+
+
+<section class="big-img-section">
+<div class="product-container1">
+      
+  <a class="img-container1" href=<%=`/product/${result[28]._id}` %>>
+    <span class="big-overlayer"></span>
+    <img class="big-img" src="<%=result[28]['Product-picture-Link'] %>" alt="bottle">
+ 
+</a>
+
+  <a class="product-info" href="#">
+  <div >
+  <p>Bottle Grinder</p>
+  <p>Menu</p>
+</div>
+<p>$75.00</p>
+
+</a>
+</div>
+</section>
+
+
+<!--   6th GRID Section       -->
+    
+<section class="product-grid">
+  <% for( let i = 29; i < 32; i++ ) { %>
+
+    <div class="product-container2">
+      <a class="img-container2" href=<%=`/product/${result[i]._id}` %>>
+        <span class="small-overlayer"></span>
+        <img src="<%=result[i]['Product-picture-Link'] %>" alt="desk lamp">
+      </a>
+     
+      <a class="product-info2" href="#">
+        <div>
+          <p><%=result[i].name %> </p>
+          <p><%= result[i].Company %> </p>
+        </div>
+        <p>$<%= result[i].Price %> </p>
+    
+      </a>
+    </div>
+      
+        <% } %>
+      <!-- 3 -->
+  
+     
+  
+      
+
+</section>
+<footer>
+  <div class="footer-div">
+     <p> The Design Shop</p>
+    <p>Carefully curated online design store,</p>
+    <p>foundes and designed by <b>Ruby Bacanovic</b> </p>
+
+  </div>
+  <div class="footer-div">
+    <p> Contact</p>
+    <a href="#">Email us</a>
+    <a href="#">Work with us</a>
+  </div>
+  <div class="footer-div">
+    <p>  Newsletter</p>
+    <a href="#">Click here to <b>subscribe.</b></a>
+    <p> <i>Don't worry. We hate spam too.</i> </p>
+  </div>
+  <div class="footer-div">
+  <p>Find us Here </p>
+    <a href="#">Facebook</a>
+    <a href="#">Instergram</a>
+    <a href="#">Twitter</a>
+  </div>
+</footer>
+<div class="copyright">
+  <p>©2019 The Design Shop</p>
+<li>The Design Blog</li>
+</div>
+
+ 
+
+
+
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
