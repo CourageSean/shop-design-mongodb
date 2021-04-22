@@ -47,9 +47,14 @@ updateBtn.addEventListener("click",(e) => {
   updateForm.classList.toggle("hide")
 })
 deleteBtn.addEventListener("click",(e) => {
-//     fetch(`https://localhoast:3004/delete/${event.target.dataset.id}`)
-//   .then(response => response.json())
-//   .then(json => console.log(json))
+    fetch(`/delete/${event.target.dataset.id}`,{ method: 'DELETE'})
+  .then(response => response.json())
+  .then((data) => {
+    window.location.href = data.redirect
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 console.log(event.target.dataset.id)
 
 })

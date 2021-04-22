@@ -18,7 +18,7 @@ mongoose.connect(dbURI,{useNewUrlParser:true, useUnifiedTopology:true, useFindAn
     console.log("listening port 3004")
     Product.find()
     .then((result) => {
-      console.log(result)
+      
     } ).catch((err) => {
       console.log(err)
     })
@@ -83,4 +83,19 @@ app.post("/update/:id",(req,res) => {
 
 
 })
+app.delete("/delete/:id",(req,res) => {
+    const id = req.params.id
+  
+    Product.findByIdAndRemove(id)
+    .then((data) => {
+        res.json({redirect:"/"})
+        
+    } ).catch((err) => {
+      console.log(err)
+    })
+
+
+})
+
+
 
